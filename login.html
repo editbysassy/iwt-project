@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIST University Login Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+    <div class="login-wrapper">
+        <!-- Cover Page Section -->
+        <div class="cover-section">
+            <div class="cover-image">
+                <img src="nist.jpeg" alt="College Campus">
+            </div>
+            <div class="cover-overlay"></div>
+            <div class="cover-content">
+                <h1>Welcome to NIST University</h1>
+                <p>Your Gateway to Excellence</p>
+            </div>
+        </div>
+
+        <!-- Login Container -->
+        <div class="login-container">
+            <div class="login-box">
+                <div class="college-logo">
+                    <h1>🎓 NIST University</h1>
+                </div>
+
+                <!-- Login Form -->
+                <div id="loginForm" class="form-section active">
+                    <h2>Login</h2>
+                    <form onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label for="loginEmail">Email:</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password:</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userType">Login As:</label>
+                            <select id="userType" name="userType" required>
+                                <option value="">Select User Type</option>
+                                <option value="student">Student</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-login">Login</button>
+                    </form>
+
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" onclick="toggleForms()">Register here</a></p>
+                    </div>
+                </div>
+
+                <!-- Register Form -->
+                <div id="registerForm" class="form-section">
+                    <h2>Register</h2>
+                    <form onsubmit="handleRegister(event)">
+                        <div class="form-group">
+                            <label for="regFullName">Full Name:</label>
+                            <input type="text" id="regFullName" name="fullName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regEmail">Email:</label>
+                            <input type="email" id="regEmail" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regPhone">Phone:</label>
+                            <input type="tel" id="regPhone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regRollNo">Roll Number / Employee ID:</label>
+                            <input type="text" id="regRollNo" name="rollNo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regUserType">Register As:</label>
+                            <select id="regUserType" name="userType" required>
+                                <option value="">Select User Type</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regPassword">Password:</label>
+                            <input type="password" id="regPassword" name="password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="regConfirmPassword">Confirm Password:</label>
+                            <input type="password" id="regConfirmPassword" name="confirmPassword" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-register">Register</button>
+                    </form>
+
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
