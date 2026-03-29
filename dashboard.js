@@ -20,7 +20,7 @@ function loadUserInfo() {
     }
 }
 
-// Show content section
+// Show content section (sidebar navigation)
 function showSection(sectionId) {
     // Hide all sections
     const sections = document.querySelectorAll('.content-section');
@@ -42,6 +42,32 @@ function showSection(sectionId) {
 
     // Set active nav item
     event.target.classList.add('active');
+}
+
+// Show top section (top navbar navigation)
+function showTopSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    // Remove active class from all navbar links
+    const navbarLinks = document.querySelectorAll('.navbar-link');
+    navbarLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Show selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.classList.add('active');
+    }
+
+    // Set active navbar link
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
 }
 
 // Handle complaint submission
